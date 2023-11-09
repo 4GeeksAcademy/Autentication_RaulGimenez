@@ -13,6 +13,7 @@ export const LogIn = () => {
 
     const navigate = useNavigate()
 
+
     const handleInputChange = e => {
         setFormData({
             ...formData,
@@ -22,7 +23,7 @@ export const LogIn = () => {
 
     const loginFetch =(e) => {
         e.preventDefault();
-        fetch("https://shiny-enigma-xj6ppq97pvj26x4v-3001.app.github.dev/api/login", {
+        fetch(`${process.env.BACKEND_URL}api/login`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

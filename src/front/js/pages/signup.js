@@ -22,7 +22,7 @@ export const SignUp = () => {
 
     const signupFetch =(e) => {
         e.preventDefault();
-        fetch("https://shiny-enigma-xj6ppq97pvj26x4v-3001.app.github.dev/api/users", {
+        fetch(`${process.env.BACKEND_URL}api/signup`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ export const SignUp = () => {
             alert("Registration successful!")
         })
         .then(() => {
-            navigate("/api/login")
+            navigate("/login")
         })
         .catch ((err) => {
             console.error("Registration failed", err);
