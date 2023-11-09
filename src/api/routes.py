@@ -18,7 +18,7 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
-@api.route("/users", methods=["GET"])
+@api.route("/private", methods=["GET"])
 @jwt_required()
 def users():
     users = db.session.execute(db.select(User)).scalars()

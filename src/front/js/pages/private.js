@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import checkLog from "../utils/checkLog";
 
 import { Context } from "../store/appContext";
 
-export const Demo = () => {
+export const Private = () => {
 	const { store, actions } = useContext(Context);
 
+	checkLog()
 	return (
 		<div className="container">
+			<h1>Private Page</h1>
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (

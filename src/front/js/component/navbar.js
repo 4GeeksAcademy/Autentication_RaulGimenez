@@ -7,7 +7,7 @@ export const Navbar = () => {
 	useEffect(() => {
 		localStorage.getItem("token") ? setNavButtons(		
 			<div className="ml-auto">
-				<Link to="/demo" className="btn btn-primary m-3 col">Demo</Link>
+				<Link to="/private" className="btn btn-primary m-3 col">Private</Link>
 				<button onClick={handleClickLogOut} className="btn btn-danger">Logout</button>
 			</div>
 		) : 

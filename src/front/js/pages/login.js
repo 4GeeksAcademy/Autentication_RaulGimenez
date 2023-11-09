@@ -46,7 +46,7 @@ export const LogIn = () => {
             alert("Login successful!")
         })
         .then(() => {
-            navigate("/demo")
+            navigate("/private")
         })
         .then(() => {
             location.reload()
